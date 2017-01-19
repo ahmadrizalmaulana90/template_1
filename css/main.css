@@ -1,0 +1,154 @@
+.mont{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.glori{
+font-family: 'Gloria Hallelujah', cursive;
+}
+
+.acme{
+    font-family: 'Acme', sans-serif;
+}
+
+.quick{
+font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #373a3c;
+    background-color: #f5f5f5;
+}
+
+
+.navbar-inverse {
+    background-color: rgba(35, 25, 25, 0.23);
+    border-color: transparent;
+}
+
+.navbar-right{
+	margin-bottom: 10;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.shadows{
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.jumbotron{
+    background-image: url('../img/13.jpg');
+    width: 100%;
+    height: 120vh;
+    background-color: #858586;
+    margin-top: -125px;
+		-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: #858586; 
+}
+
+.container1 {
+    margin-top: -100px;
+}
+
+.projects {
+    color: black;
+    background-color: #eceaea;
+    margin-top: -198px;
+}
+
+.projects1{
+    background-image: url('../img/13.jpg');
+    	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+.img-circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.projects3{
+    background-color:#ffd600; 
+}
+
+.projects7 {
+    background-color: #ffd600;
+}
+
+.projects8 {
+    background-color: #181818;
+    margin-top: -200px;
+}
+.projects4{
+    margin-top: -198px;
+     
+}
+
+.projects5{
+     background-image: url('../img/12 (2).jpg');
+    	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    height: 70vh;
+}
+
+.projects6{
+     background-image: url('../img/13.jpg');
+    	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    height: 400px;
+    text-align: center;
+}
+
+@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+
+.panel-pricing {
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+}
+.panel-pricing:hover {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+.panel-pricing .panel-heading {
+  padding: 20px 10px;
+}
+.panel-pricing .panel-heading .fa {
+  margin-top: 10px;
+  font-size: 58px;
+}
+.panel-pricing .list-group-item {
+  color: #777777;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+}
+.panel-pricing .list-group-item:last-child {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.panel-pricing .list-group-item:first-child {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.panel-pricing .panel-body {
+  background-color: #f0f0f0;
+  font-size: 40px;
+  color: #777777;
+  padding: 20px;
+  margin: 0px;
+}
