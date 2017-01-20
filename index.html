@@ -3,27 +3,48 @@
    <head>
       <title>Latihan pertama</title>
       <!-- css -->
-      <link href="css/main.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
       <link rel="stylesheet" href="css/circle.css">
-      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
       
-      
-
-      <!-- google-fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-
       <!--js-->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
      
       <style>
+
+     /*font*/
+      @font-face {
+         font-family: "Acme-Regular";
+         src: url('fonts/Acme/Acme-Regular.ttf');
+         }
+      @font-face {
+         font-family: "OpenSans-CondBold";
+         src: url('fonts/open/OpenSans-CondBold.ttf');
+         }
+      @font-face {
+         font-family: "Amatic_SC";
+         src: url('fonts/Amatic_SC/AmaticSC-Bold.ttf');
+         }
+
+
+     .acme{
+         font-family: "Acme-Regular";
+         }
+     .open{
+         font-family: "OpenSans-CondBold";
+         font-size: 20px;
+         }
+     .amatic{
+         font-family: "Amatic_SC";
+         font-size: 20px;
+         }
+     /*end*/
+
+
       /*navbar*/
       .navbar-inverse {
-        background-color: ;
+
         border-color: transparent;
        }
       .navbar-inverse .navbar-nav > li > a {
@@ -34,12 +55,16 @@
            background-color: transparent;
        }
 
+
+
       /*text-center*/
       .text-xs-center {
           text-align: center !important;
           margin-top: 200px;
           color: white;
        }
+
+
 
       /*button*/
        .btn-warning {
@@ -51,6 +76,7 @@
            height: 50px;
       }
 
+
       /*ukuran*/
       .col-md-3{
          position: relative;
@@ -58,6 +84,7 @@
          padding-left: 0px;
          padding-right: 0px;
       }
+
 
      /*panel*/
       .panel-primary {
@@ -70,6 +97,7 @@
           padding-top: 0px;
        }
 
+
        /*carousel*/
       .carousel-indicators {
           bottom: -50px;
@@ -78,7 +106,8 @@
           position: relative;
           margin-top: 100px;
        }
-            
+
+
        /*circle-progress*/     
       .page {
           margin: 40px;
@@ -101,37 +130,40 @@
       .c100.dark > span {
          color: white;
        }
+
        
        .back-to-top {
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display:none;
-}
-#background {
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: -999;
-    width: 100%;
-    height: 90%;
-}
+          cursor: pointer;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          display:none;
+      }
+      #background {
+          position: absolute;
+          top:0;
+          left:0;
+          z-index: -999;
+          width: 100%;
+          height: 90%;
+      }
 
-.container-fluid {
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.btn-success {
-    color: #fff;
-    background-color: #474b47;
-    border-color: #4cae4c;
-    border-radius: 100px;
-    width: 180px;
-}
+     .container-fluid {
+         padding-right: 0px;
+         padding-left: 0px;
+         margin-right: auto;
+         margin-left: auto;
+     }
+     .btn-success {
+         color: #fff;
+         background-color: #474b47;
+         border-color: #4cae4c;
+         border-radius: 100px;
+         width: 180px;
+     }
         </style>
+
+
 <script>
 $(document).ready(function(){
      $(window).scroll(function () {
@@ -154,163 +186,185 @@ $(document).ready(function(){
 
 });
 
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
 </script>
+
    </head>
-       <body>
-         <nav class="navbar-inverse">
-            <div class="container">
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span> 
-                    </button>
-                      <a class="navbar-brand" href="#" style="color: white";><b>SLEVO</b></a>
-                </div>
-                  <div class="collapse navbar-collapse" id="myNavbar">
-                       <ul class="nav navbar-nav navbar-right">
-                          <li><a class="page-scroll" href="#link1"><p class="mont"><b>Home</b></p></a></li>
-                          <li><a class="page-scroll" href="#link2"><p class="mont"><b>About</b></p></a></li>
-                          <li><a class="page-scroll" href="#link3"><p class="mont"><b>Team</b></p></a></li>
-                          <li><a class="page-scroll" href="#link4"><p class="mont"><b>Services</b></p></a></li>
-                          <li><a class="page-scroll" href="#link5"><p class="mont"><b>Work</b></p></a></li>
-                          <li><a class="page-scroll" href="#link6"><p class="mont"><b>Clients</b></p></a></li>
-                          <li><a class="page-scroll" href="#link10"><p class="mont"><b>Contact</b></p></a></li>
-                          <li><a class="page-scroll" href="#link8"><p class="mont"><b>Blog</b></p></a></li>
-                       </ul>
-                  </div>
-                </div>
+        <body>
+            <nav class="navbar-inverse">
+                 <div class="container">
+                        <div class="navbar-header page-scroll">
+                              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                     <span class="icon-bar"></span>
+                                     <span class="icon-bar"></span>
+                                     <span class="icon-bar"></span> 
+                             </button>
+                                   <a class="navbar-brand" href="#" style="color: white";><b class="acme">SLEVO</b></a>
+                        </div>
+                              <div class="collapse navbar-collapse" id="Navbarku">
+                                   <ul class="nav navbar-nav navbar-right">
+                                             <li><a class="page-scroll" href="#link1"><b>Home</b></p></a></li>
+                                             <li><a class="page-scroll" href="#link2"><b>About</b></p></a></li>
+                                             <li><a class="page-scroll" href="#link3"><b>Team</b></p></a></li>
+                                             <li><a class="page-scroll" href="#link4"><b>Services</b></p></a></li>
+                                             <li><a class="page-scroll" href="#link5"><b>Work</b></p></a></li>
+                                             <li><a class="page-scroll" href="#link6"><b>Clients</b></p></a></li>
+                                             <li><a class="page-scroll" href="#link10"><b>Contact</b></p></a></li>
+                                             <li><a class="page-scroll" href="#link8"><b>Blog</b></p></a></li>
+                                    </ul>
+                              </div>
+                         </div>
             </nav>
+
+
 
 
        <!--jumbroton/header-banner-->
        
           <div class="jumbotron">
-             <div class="nav nav-inline text-xs-center">
-                <img src="img/map.png" style="max-width:10%";>
-                <h4><b>BUILDING BRANDS ON THE WEB</b></h4>
-                     <div class="container">
-                        <hr>
-                     </div>
-                     <h1 class="glori"><b>WERE ARE SLOVEN</b></h1>
-            </div>
+                <div class="nav nav-inline text-xs-center">
+                     <img src="img/map.png" style="max-width:10%";>
+                             <h4><b>BUILDING BRANDS ON THE WEB</b></h4>
+                                  <div class="container">
+                                       <hr>
+                                  </div>
+                                    <h1 class="acme"><b>WERE ARE SLOVEN</b></h1>
+              </div>
          </div>
        
 
 
        <!--page2-->
     <section id="link2">
-       <div class="text-xs-center">
-           <div class="container1">
-             <h2 class="acme" style="color:black";> <b>WERE ARE SLOVEN </b></h1>   
-             <h5 class="mont" style="color:black";> SOME OF THE MOST RELEVANT FEATURES OF OUR NEW THEME </h5>
-                <div class="container">
-                 <hr>
-                </div>
-                   <h5 style="color: black"; class=""> Vicamus magna justo. Laciana eget consectetur sed. 
-                     convallis at tellusque<p> pretium ut lacinia in. elementum id enim. Stibulum ac diam 
-                     sit amet quam vehicula elementum sed it amet</p>
-                  </h5>
-           </div>
-              <br><br><br>
-                 <div class="container">
-                          <div class="col-md-3">
-                                  <img src="img/1.jpg" class="img-circle">
-                                  <h4 style="color: black"; class="acme">POWER PAGEBUILDER</h4>
-                                  <h5 style="color: black"; class=""> Curabitur arcu erat, accumsan id imperdiet et, 
-                                      porttitor at sem.quisque velit nisi, pretium'ut lacinia in, elementum id
-                                  </h5>
-                          </div>
-
-                          <div class="col-md-3">
-                                  <img src="img/2.jpg" class="img-circle">
-                                  <h4 style="color: black"; class="acme">POWER PAGEBUILDER</h4>
-                                  <h5 style="color: black"; class=""> Curabitur arcu erat, accumsan id imperdiet et,
-                                     porttitor at sem quisque velit nisi, pretium'ut lacinia in, elementum id
-                                  </h5>
-                          </div>
-
+           <div class="text-xs-center">
+                  <div class="container1">
+                           <h2 class="acme" style="color:black";> <b>WERE ARE SLOVEN </b></h1>   
+                           <h5 class="open" style="color:black";> SOME OF THE MOST RELEVANT FEATURES OF OUR NEW THEME </h5>
+                              <div class="container">
+                                  <hr>
+                            </div>
+                             <h4 style="color: black";> Vicamus magna justo. Laciana eget consectetur sed. 
+                             convallis at tellusque<p> pretium ut lacinia in. elementum id enim. Stibulum ac diam 
+                            sit amet quam vehicula elementum sed it amet</p>
+                             </h4>
+                   </div>
+                           <br><br><br>
+                      <div class="container">
                            <div class="col-md-3">
-                                  <img src="img/3.jpg" class="img-circle">
-                                  <h4 style="color: black"; class="acme">POWER PAGEBUILDER</h4>
-                                  <h5 style="color: black"; class=""> Curabitur arcu erat, accumsan id imperdiet et, 
-                                      porttitor at sem.quisque velit nisi, pretium'ut lacinia in, elementum id
-                                  </h5>
+                               <img src="img/1.jpg" class="img-circle">
+                                    <h4 style="color: black"; class="acme">POWER PAGEBUILDER</h4>
+                                    <h5 style="color: black"; class="amatic"> <b>Curabitur arcu erat, accumsan id imperdiet et, 
+                                      porttitor at sem.quisque velit nisi, pretium'ut lacinia in, elementum id</b>
+                                    </h5>
                           </div>
 
-                          <div class="col-md-3">
-                                 <img src="img/5.jpg" class="img-circle">
-                                 <h4 style="color: black"; class="acme">POWER PAGEBUILDER</h4>
-                                 <h5 style="color: black"; class="Glori"> Curabitur arcu erat, accumsan id 
-                                   imperdiet et, porttitor at sem.quisque velit nisi, pretium'ut lacinia in, elementum id
-                                 </h5>
-                         </div>
-              </div>
-    </div><!--end-->
+                                <div class="col-md-3">
+                                     <img src="img/13.jpg" class="img-circle">
+                                        <h4 style="color: black"; class="acme">POWER PAGEBUILDER</h4>
+                                        <h5 style="color: black"; class="amatic"> Curabitur arcu erat, accumsan id imperdiet et,
+                                         porttitor at sem quisque velit nisi, pretium'ut lacinia in, elementum id
+                                        </h5>
+                                </div>
+
+                                <div class="col-md-3">
+                                     <img src="img/14.jpg" class="img-circle">
+                                          <h4 style="color: black"; class="acme">POWER PAGEBUILDER</h4>
+                                          <h5 style="color: black"; class="amatic"> Curabitur arcu erat, accumsan id imperdiet et, 
+                                            porttitor at sem.quisque velit nisi, pretium'ut lacinia in, elementum id
+                                          </h5>
+                                </div>
+
+                                <div class="col-md-3">
+                                      <img src="img/5.jpg" class="img-circle">
+                                             <h4 style="color: black"; class="acme">POWER PAGEBUILDER</h4>
+                                             <h5 style="color: black"; class="amatic"> Curabitur arcu erat, accumsan id 
+                                             imperdiet et, porttitor at sem.quisque velit nisi, pretium'ut lacinia in, elementum id
+                                             </h5>
+                                 </div>
+                    </div>
+          </div><!--end-->
     </section>
       
       
         <br><br>
 
     <!--page3-->
- <section id="link" class="link-section">
-    <div class="projects">
-         <div class="text-xs-center"><br><br>
-              <img src="img/65.svg" style="width: 15%";  >
-              <h3 class="acme" style="color: black";>STUNNING DESIGN & GREAT FUNCTIONALITY</h3>
-              <p> <h4 class="mont" style="color: black";>   Sde porttitor lectus nibh. Nulia porttitor accumsan 
-              tincindunt. Proin eget tortor risusuisque velit nisi <p>pretium ut lacinia in, elementum</p></h4> 
-              </p>
+    <section id="link" class="link-section">
+          <div class="projects">
+               <div class="text-xs-center"><br><br>
+                    <img src="img/65.svg" style="width: 15%";  >
+                    <h3 class="acme" style="color: black";>STUNNING DESIGN & GREAT FUNCTIONALITY</h3>
+                    <p> <h4 class="mont" style="color: black";>   Sde porttitor lectus nibh. Nulia porttitor accumsan 
+                     tincindunt. Proin eget tortor risusuisque velit nisi <p>pretium ut lacinia in, elementum</p></h4> 
+                    </p>
         
-              <br>
-                <button class="btn btn-warning">
-                     Read More
-                </button>  
-              <br>
-              <p><center><br>
-                 <img src="img/diamond.svg" class="img-responsive" style="max-width: 20%";> 
-              </center></p>
+                 <br>
+                   <button class="btn btn-warning">
+                       Read More
+                   </button>  
+                  <br>
+                 <p><center><br>
+                    <img src="img/diamond.svg" class="img-responsive" style="max-width: 20%";> 
+                 </center></p>
              
-         </div>
-    </div><!--end-->
- </section>
+             </div>
+       </div><!--end-->
+   </section>
 
-   <!--page4-->
-<section id="link3" class="link3-section">
-    <div class="text-xs-center">
-         <div class="container1">
-                <h2 class="acme" style="color:black";> <b>OFFICIAL TEAM </b></h1>   
-                <h5 class="mont" style="color:black";>TYPI NON HABENT CLARITATEM INSITAM EST USU LEGENTIS IN IIS QUI </h5>
+
+
+      <!--page4-->
+    <section id="link3" class="link3-section">
+         <div class="text-xs-center">
+              <div class="container1">
+                    <h2 class="acme" style="color:black";> <b>OFFICIAL TEAM </b></h1>   
+                    <h5 class="mont" style="color:black";>TYPI NON HABENT CLARITATEM INSITAM EST USU LEGENTIS IN IIS QUI </h5>
                   <div class="container">
                      <hr>
                  </div>
-         </div>
+             </div>
+
                   <br><br><br>
+
           <div class="container">
                  <div class="col-md-4">
                        <img src="img/5.jpg" style="max-width: 100%";>
-                       <h5 style="color: black"; class="mont"><b>AHMAD RIZAL MAULANA</b></h5>
-                       <h6 style="color: black"; class="">WEB FRONT-END</h6>
+                       <h5 style="color: black"; class="acme"><b>AHMAD RIZAL MAULANA</b></h5>
+                       <h6 style="color: black";>WEB FRONT-END</h6>
                         <hr>
                 </div>
 
                  <div class="col-md-4">
                          <img src="img/8.jpg" style="max-width: 100%";>
-                         <h5 style="color: black"; class="mont"><b>AHMAD RIZAL MAULANA</b></h5>
-                         <h6 style="color: black"; class="">DESIGNER</h6>
+                         <h5 style="color: black"; class="acme"><b>AHMAD RIZAL MAULANA</b></h5>
+                         <h6 style="color: black";>DESIGNER</h6>
                           <hr>
                  </div>
 
                 <div class="col-md-4">
                          <img src="img/1.jpg" style="max-width: 100%";>
-                         <h5 style="color: black"; class="mont"><b>AHMAD RIZAL MAULANA</b></h5>
-                         <h6 style="color: black"; class="">WEB BACK-END</h6>
+                         <h5 style="color: black"; class="acme"><b>AHMAD RIZAL MAULANA</b></h5>
+                         <h6 style="color: black";>WEB BACK-END</h6>
                            <hr>
                 </div>
           </div>
     </div><!--end-->
  </section>
  
+
+
     <!--page5-->
 <section id="link4" class="link4-section">
      <div class="projects1">
@@ -318,7 +372,7 @@ $(document).ready(function(){
              <center>
                   <img src="img/65.svg" style="width: 15%";>
                   <h2 class="acme" style="color: white";><b>STUNNING DESIGN & GREAT FUNCTIONALITY</b></h2>
-                      <p> <h4 class="mont" style="color: white";>  <b> Sde porttitor lectus nibh. Nulia porttitor 
+                      <p> <h4 style="color: white";>  <b> Sde porttitor lectus nibh. Nulia porttitor 
                         accumsan tincindunt. Proin eget tortor risusuisque velit nisi <p>pretium ut lacinia in, elementum
                       </p></b>
                   </h4> </p>
@@ -327,9 +381,10 @@ $(document).ready(function(){
 
         
                   <div class="clearfix">
+                      <div class="container">
                        <div class="col-md-4">
                              <div class="c100 p58 big dark">
-                                    <span>58%<br> <h4 class="mont"><b>JAVASCRIPT</b></h4></span>
+                                    <span>58%<br> <h4><b>JAVASCRIPT</b></h4></span>
                                          <div class="slice">
                                               <div class="bar"></div>
                                               <div class="fill"></div>
@@ -339,7 +394,7 @@ $(document).ready(function(){
     
                        <div class="col-md-4">
                               <div class="c100 p75 big dark">
-                                    <span>75%<br> <h4 class="mont"><b>HTML</b></h4></span>
+                                    <span>75%<br> <h4><b>HTML</b></h4></span>
                                          <div class="slice">
                                             <div class="bar"></div>
                                             <div class="fill"></div>
@@ -349,10 +404,11 @@ $(document).ready(function(){
 
                        <div class="col-md-4">
                              <div class="c100 p25 big dark">
-                                  <span>25%<br> <h4 class="mont"><b>CSS</b></h4></span>
+                                  <span>25%<br> <h4><b>CSS</b></h4></span>
                                       <div class="slice">
                                             <div class="bar"></div>
-                                            <div class="fill"></div>
+                                            <div class="<fill></fill>"></div>
+                                      </div>
                             </div>
                        </div>
                    </div>
@@ -362,6 +418,7 @@ $(document).ready(function(){
 </section>
 
 
+
       <!--page6-->
     <section id="link5" class="link5-section">
        <div class="projects">
@@ -369,7 +426,7 @@ $(document).ready(function(){
                    <div class="container1">
                      <br><br>
                           <h2 class="acme" style="color:black";> <b>OFFICIAL TEAM </b></h1>   
-                          <h5 class="mont" style="color:black";>TYPI NON HABENT CLARITATEM INSITAM EST USU LEGENTIS IN IIS QUI </h5>
+                          <h5 style="color:black";>TYPI NON HABENT CLARITATEM INSITAM EST USU LEGENTIS IN IIS QUI </h5>
                               <div class="container">
                                   <hr>
                               </div>
@@ -380,7 +437,7 @@ $(document).ready(function(){
                                       <hr>
                                       <h5 style="color: black"; class="mont"><b><img src="img/15.svg" 
                                       style="max-width: 15%";>| AHMAD RIZAL MAULANA</b></h5> |
-                                      <h6 style="color: black"; class="">
+                                      <h6 style="color: black";>
                                           <blockquote> porttitor lectus nibh. Nulia porttitor accumsan tincindunt. 
                                             Proin eget tortor risusuisque velit nisi pretium ut lacinia in, elementum
                                             Sde porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
@@ -396,7 +453,7 @@ $(document).ready(function(){
                            <hr>
                                <h5 style="color: black"; class="mont"><b><img src="img/15.svg" 
                                style="max-width: 15%";>| AHMAD RIZAL MAULANA</b></h5> |
-                               <h6 style="color: black"; class="">
+                               <h6 style="color: black";>
                                  <blockquote> porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
                                         tortor risusuisque velit nisi pretium ut lacinia in, elementum
                                         Sde porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
@@ -411,7 +468,7 @@ $(document).ready(function(){
                         <hr>
                            <h5 style="color: black"; class="mont"><b><img src="img/15.svg" 
                            style="max-width: 15%";>| AHMAD RIZAL MAULANA</b></h5> |
-                           <h6 style="color: black"; class="">
+                           <h6 style="color: black";>
                                <blockquote> porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
                                             tortor risusuisque velit nisi pretium ut lacinia in, elementum
                                             Sde porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
@@ -427,7 +484,7 @@ $(document).ready(function(){
                          <hr>
                              <h5 style="color: black"; class="mont"><b><img src="img/15.svg" 
                              style="max-width: 15%";>| AHMAD RIZAL MAULANA</b></h5> |
-                             <h6 style="color: black"; class="">
+                             <h6 style="color: black";>
                                    <blockquote> porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
                                                 tortor risusuisque velit nisi pretium ut lacinia in, elementum
                                                 Sde porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
@@ -442,8 +499,8 @@ $(document).ready(function(){
                    <div class="col-md-4">
                       <hr>
                           <h5 style="color: black"; class="mont"><b><img src="img/15.svg" 
-                          style="max-width: 15%";>| AHMAD RIZAL MAULANA</b></h5> 
-                          <h6 style="color: black"; class="">
+                          style="max-width: 15%";>| AHMAD RIZAL MAULANA</b></h5> |
+                          <h6 style="color: black";>
                              <blockquote> porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
                                           tortor risusuisque velit nisi pretium ut lacinia in, elementum
                                           Sde porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
@@ -458,8 +515,8 @@ $(document).ready(function(){
                    <div class="col-md-4">
                       <hr>
                            <h5 style="color: black"; class="mont"><b><img src="img/15.svg"
-                           style="max-width: 15%";>| AHMAD RIZAL MAULANA</b></h5>
-                           <h6 style="color: black"; class="">
+                           style="max-width: 15%";>| AHMAD RIZAL MAULANA</b></h5> |
+                           <h6 style="color: black";>
                                <blockquote> porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
                                         tortor risusuisque velit nisi pretium ut lacinia in, elementum
                                         Sde porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
@@ -480,7 +537,7 @@ $(document).ready(function(){
                <div class="text-xs-center">
                     <div class="container1">
                           <h2 class="acme" style="color:black";> <b>OFFICIAL TEAM </b></h1>   
-                          <h5 class="mont" style="color:black";>TYPI NON HABENT CLARITATEM INSITAM EST USU 
+                          <h5 style="color:black";>TYPI NON HABENT CLARITATEM INSITAM EST USU 
                             LEGENTIS IN IIS QUI </h5>
                                   <div class="container">
                                       <hr>
@@ -526,29 +583,29 @@ $(document).ready(function(){
                                                     <div class="container">
                 
                                                         <div class="col-md-3"><br><br>
-                                                               <h3 class="mont" style="color: black";>
+                                                               <h3 style="color: black";>
                                                                <img src="img/15.svg" style="max-width: 10%";>
                                                                <b> 2014 </b></h3>
                                                                <h5 style="color: black";> project selesai </h5>
                                                         </div>
 
                                                          <div class="col-md-3"><br><br>
-                                                                    <h3 class="mont" style="color: black";>
+                                                                    <h3 style="color: black";>
                                                                     <img src="img/16.svg" style="max-width: 10%";>
                                                                     <b>2015 </b></h3>
                                                                     <h5 style="color: black";> project selesai </h5>
                                                          </div>
 
                                                          <div class="col-md-3"><br><br>
-                                                                     <h3 class="mont" style="color: black";>
+                                                                     <h3 style="color: black";>
                                                                      <img src="img/17.svg" style="max-width: 10%";>
                                                                      <b>2016 </b></h3>
                                                                      <h5 style="color: black";> projects selesai </h5>
                                                          </div>
 
                                                          <div class="col-md-3"><br><br>
-                                                                   <h3 class="mont" style="color: black";>
-                                                                   <img src="img/18.svg" style="max-width: 10%";>
+                                                                   <h3 style="color: black";>
+                                                                   <img src="img/16.svg" style="max-width: 10%";>
                                                                    <b> 2017 </b></h3>
                                                                    <h5 style="color: black";> projects selesai </h5>
                                                                       <br><br><br>
@@ -566,7 +623,7 @@ $(document).ready(function(){
               <div class="projects4">
                             <div class="text-xs-center"><br><br>
                                       <h3 class="acme" style="color: black";>STUNNING DESIGN & GREAT FUNCTIONALITY</h3>
-                                      <p> <h4 class="mont" style="color: black";>   Sde porttitor lectus nibh. Nulia porttitor 
+                                      <p> <h4 style="color: black";>   Sde porttitor lectus nibh. Nulia porttitor 
                                         accumsan tincindunt. Proin eget tortor risusuisque velit nisi <p>pretium ut lacinia in, elementum
                                       </p></h4> </p>
                                        <hr>
@@ -576,8 +633,8 @@ $(document).ready(function(){
                                       <div class="col-md-4">
                                             <div class="thumbnail">
                                                 <img src="img/13.jpg">
-                                                    <h4 class="mont" style="color: black";><b>A BEAUTIFUL VIEW</b> </h4>
-                                                    <h6 class="mont" style="color: black";>NOVEMBER 21. 2013 | 4 comments | 60</h6>
+                                                    <h4 class="acme" style="color: black";><b>A BEAUTIFUL VIEW</b> </h4>
+                                                    <h6  style="color: black";>NOVEMBER 21. 2013 | 4 comments | 60</h6>
                                                     <h6 class="quick" style="color: black";> 
                                                           <blockquote> porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
                                                                        tortor risusuisque velit nisi pretium ut lacinia in, elementum
@@ -591,8 +648,8 @@ $(document).ready(function(){
                                       <div class="col-md-4">
                                                <div class="thumbnail">
                                                     <img src="img/13.jpg">
-                                                         <h4 class="mont" style="color: black";><b>A BEAUTIFUL VIEW</b> </h4>
-                                                         <h6 class="mont" style="color: black";>NOVEMBER 21. 2013 | 4 comments | 60</h6>
+                                                         <h4 class="acme" style="color: black";><b>A BEAUTIFUL VIEW</b> </h4>
+                                                         <h6 style="color: black";>NOVEMBER 21. 2013 | 4 comments | 60</h6>
                                                          <h6 class="quick" style="color: black";> 
                                                              <blockquote> porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
                                                                           tortor risusuisque velit nisi pretium ut lacinia in, elementum
@@ -608,8 +665,8 @@ $(document).ready(function(){
                                      <div class="col-md-4">
                                          <div class="thumbnail">
                                               <img src="img/13.jpg">
-                                                 <h4 class="mont" style="color: black";><b>A BEAUTIFUL VIEW</b> </h4>
-                                                 <h6 class="mont" style="color: black";>NOVEMBER 21. 2013 | 4 comments | 60</h6>
+                                                 <h4 class="acme" style="color: black";><b>A BEAUTIFUL VIEW</b> </h4>
+                                                 <h6 style="color: black";>NOVEMBER 21. 2013 | 4 comments | 60</h6>
                                                  <h6 class="quick" style="color: black";> 
                                                    <blockquote> porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
                                                                 tortor risusuisque velit nisi pretium ut lacinia in, elementum
@@ -669,7 +726,7 @@ $(document).ready(function(){
                                                       <div class="">
                                                            <br>
                                                              <h4>Premium Plan</h4>
-                                                             <h6 class="quick"> Mouse Recomended</h6>
+                                                             <h6 class="open"> Mouse Recomended</h6>
                                                            <br>
                                                       </div>
                                            <div class="panel-body text-center" style="background-color: #ffd600";>
@@ -740,9 +797,9 @@ $(document).ready(function(){
                          <div class="item active">
                              <div class="row-fluid">
                                 <img src="img/16.svg">
-                                  <h4 class="quick" style="color: white">Ahmad Rizal Maulana</h4>
+                                  <h4 style="color: white">Ahmad Rizal Maulana</h4>
                                   <p><h6 style="color: white";>Latihan</h6></p> 
-                                  <p><h4 class="quick" style="color: white">porttitor lectus nibh. 
+                                  <p><h4 style="color: white">porttitor lectus nibh. 
                                     Nulia porttitor accumsan tincindunt. Proin eget
                                     tortor risusuisque velit nisi pretium ut lacinia in, elementum
                                     Sde porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
@@ -753,9 +810,9 @@ $(document).ready(function(){
                                    <div class="item">
                                        <div class="row-fluid">
                                            <img src="img/17.svg">
-                                               <h4 class="quick" style="color: white">Ahmad Rizal Maulana</h4>
+                                               <h4 style="color: white">Ahmad Rizal Maulana</h4>
                                                <p><h6 style="color: white";>Latihan</h6></p> 
-                                               <p><h4 class="quick" style="color: white">porttitor lectus nibh.
+                                               <p><h4 style="color: white">porttitor lectus nibh.
                                                   Nulia porttitor accumsan tincindunt. Proin eget
                                                   tortor risusuisque velit nisi pretium ut lacinia in, elementum
                                                   Sde porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
@@ -765,10 +822,10 @@ $(document).ready(function(){
 
                                  <div class="item">
                                       <div class="row-fluid">
-                                              <img src="img/18.svg">
-                                                  <h4 class="quick" style="color: white">Ahmad Rizal Maulana</h4>
+                                              <img src="img/16.svg">
+                                                  <h4 style="color: white">Ahmad Rizal Maulana</h4>
                                                   <p><h6 style="color: white";>Latihan</h6></p> 
-                                                  <p><h4 class="quick" style="color: white">porttitor lectus nibh. 
+                                                  <p><h4 style="color: white">porttitor lectus nibh. 
                                                     Nulia porttitor accumsan tincindunt. Proin eget
                                                     tortor risusuisque velit nisi pretium ut lacinia in, elementum
                                                     Sde porttitor lectus nibh. Nulia porttitor accumsan tincindunt. Proin eget
@@ -786,31 +843,31 @@ $(document).ready(function(){
     <div class="projects4">
            <div class="text-xs-center"><br><br><br><br><br><br>
                     <h3 class="acme" style="color: black";>GET IN TOUCH</h3>
-                    <h4 class="quick" style="color: black";> DONEC SOLLICITUDIN MOLESTIE MALESDUADA   </h4> 
+                    <h4 style="color: black";> DONEC SOLLICITUDIN MOLESTIE MALESDUADA   </h4> 
                        <br>
-                   <p> <h4 class="mont" style="color: black";>   Sde porttitor lectus nibh. Nulia porttitor 
+                   <p> <h4 style="color: black";>   Sde porttitor lectus nibh. Nulia porttitor 
                       accumsan tincindunt. Proin eget tortor risusuisque velit nisi <p>pretium ut lacinia in, elementum</p></h4> </p>
                      <hr style="background: black";>
         
                        <div class="container">
                            <div class="col-md-4">
                                <img src="img/16.svg">
-                                    <h5 style="color: black"; class="mont"><b>AHMAD RIZAL MAULANA</b></h5>
-                                    <h6 style="color: black"; class="">WEB FRONT-END</h6>
+                                    <h5 style="color: black";><b>AHMAD RIZAL MAULANA</b></h5>
+                                    <h6 style="color: black";>WEB FRONT-END</h6>
                                      <hr>
                            </div>
 
                       <div class="col-md-4">
                             <img src="img/17.svg">
-                            <h5 style="color: black"; class="mont"><b>AHMAD RIZAL MAULANA</b></h5>
-                            <h6 style="color: black"; class="">DESIGNER</h6>
+                            <h5 style="color: black";><b>AHMAD RIZAL MAULANA</b></h5>
+                            <h6 style="color: black";>DESIGNER</h6>
                          <hr>
                       </div>
 
                      <div class="col-md-4">
-                         <img src="img/18.svg">
-                            <h5 style="color: black"; class="mont"><b>AHMAD RIZAL MAULANA</b></h5>
-                            <h6 style="color: black"; class="">WEB BACK-END</h6>
+                         <img src="img/16.svg">
+                            <h5 style="color: black";><b>AHMAD RIZAL MAULANA</b></h5>
+                            <h6 style="color: black";>WEB BACK-END</h6>
                              <hr>
                      </div>
 
@@ -844,7 +901,7 @@ $(document).ready(function(){
      <div class="projects7">
        <div class="container1"> 
                <div class="container">
-                    <h3 style="color: black" class="acme"> <img src="img/21.svg">__<b>Find out us on google map</b></h3>
+                    <h3 style="color: black" class="acme"> <img src="img/21.svg">|<b>Find out us on google map</b></h3>
                </div>
          </div>
        </div>
@@ -855,8 +912,8 @@ $(document).ready(function(){
      <div class="projects8">
     <div class="text-xs-center">
              <div class="container"><br><br>
-                 <img src="img/png/map.png" style="max-width:10%";>
-               <h2 class="mont" style="color: white";><b>SLOVEN</b></h2><br>
+                 <img src="img/map.png" style="max-width:10%";>
+               <h2 class="open" style="color: white";><b>SLOVEN</b></h2><br>
                <img src="img/facebook.svg" style="max-width: 3%";>
                <img src="img/twitter.svg" style="max-width: 3%";>
                <img src="img/pinterest.svg" style="max-width: 3%";>
@@ -868,30 +925,12 @@ $(document).ready(function(){
   </section>
   <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Klik untuk ke halaman Home" 
   data-toggle="tooltip" data-placement="left">
-      <span class="glyphicon glyphicon-chevron-up"></span></a>
+      <span class="">Atas</span></a>
   </section>
 
 
 <script>
-  /* activate scrollspy menu */
-$('body').scrollspy({
-  target: '#myNavbar',
-  offset: 50
-});
 
-/* smooth scrolling sections */
-$('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top - 50
-        }, 1000);
-        return false;
-      }
-    }
-});
  
 </script>
 

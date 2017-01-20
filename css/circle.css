@@ -1020,7 +1020,8 @@
   height: 0.92em;
 }
 .c100.dark {
-  background-color: #777777;
+  background-color: transparent;
+
 }
 .c100.dark .bar,
 .c100.dark .fill {
@@ -1030,7 +1031,7 @@
   color: #777777;
 }
 .c100.dark:after {
-  background-color: #666666;
+    background: url('../img/13.jpg');
 }
 .c100.dark:hover > span {
   color: #c6ff00;
