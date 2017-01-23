@@ -1,3 +1,30 @@
+.container-fluid {
+	     position: relative;
+         min-height: 1px;
+         padding-left: 0px;
+         padding-right: 0px;
+    
+}
+
+
+
+.item { 
+  border: none;
+}
+
+/* Isotope Transitions
+------------------------------- */
+.isotope,
+.isotope .item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+
+
 
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -35,7 +62,7 @@ a {
 
 
 .container1 {
-    margin-top: -100px;
+    margin-top: -210px;
 }
 
 .projects {
@@ -130,4 +157,20 @@ a {
   color: #777777;
   padding: 20px;
   margin: 0px;
+}
+
+
+
+
+.play-contianer {
+    height: 860px;
+    background: linear-gradient( rgba(219, 208, 208, 0.5), rgba(252, 252, 252, 0.77) );
+}
+
+video{
+    position: absolute;
+    z-index: -1;
+    opacity: 0.78;
+    width: 100%;
+
 }
